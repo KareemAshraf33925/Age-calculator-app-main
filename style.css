@@ -1,0 +1,224 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    font-family: "Poppins", sans-serif;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--Offwhite);
+}
+:root{
+    --Purple: hsl(259, 100%, 65%);
+    --Lightred: hsl(0, 100%, 67%);    
+    --White: hsl(0, 0%, 100%);
+    --Offwhite: hsl(0, 0%, 94%);
+    --Lightgrey: hsl(0, 0%, 86%);
+    --Smokeygrey: hsl(0, 1%, 44%);
+    --Offblack: hsl(0, 0%, 8%);
+}
+
+main .container .age_calculator{
+    background-color: var(--White);
+    height: 400px;
+    width: 500px;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    border-bottom-left-radius:10px;
+    border-bottom-right-radius:150px;
+}
+main .container .age_calculator .date{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    margin: 0px 30px 0;
+    gap: 20px;
+    border-bottom: 1px solid var(--Offwhite);
+    padding: 30px 0 50px 0;
+    position: relative;
+}
+main .container .age_calculator .date .date_day{
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    flex-direction: column;
+}
+main .container .age_calculator .date .date_day .D{
+    font-size: 15px;
+    font-family:"Poppins";
+    font-weight: 400;
+    color: var(--Offblack);
+    opacity: 0.8;
+}
+main .container .age_calculator .date .date_day .D.active{
+    color: var(--Lightred);
+}
+main .container .age_calculator .date .date_day #day{
+    padding: 3px 0px;
+    width: 90px;
+    font-size: 32px;
+    border-radius: 8px;
+    border: none;
+    outline: none;
+    border: 1px solid var(--Smokeygrey);
+}
+main .container .age_calculator .date .date_day #day.active{
+    border-color: var(--Lightred);
+}
+main .container .age_calculator .date .date_day #error{
+    color: var(--Lightred);
+    font-size: 12px;
+    font-family:"Poppins";
+    font-weight: 400;
+}
+main .container .age_calculator .date .date_month{
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    flex-direction: column;
+}
+main .container .age_calculator .date .date_month .M{
+    font-size: 15px;
+    font-family:"Poppins";
+    font-weight: 400;
+    opacity: 0.8;
+}
+main .container .age_calculator .date .date_month .M.active{
+    color: var(--Lightred);
+}
+main .container .age_calculator .date .date_month #month{
+    padding: 3px 0px;
+    width: 90px;
+    font-size: 32px;
+    border-radius: 8px;
+    border: none;
+    outline: none;
+    border: 1px solid var(--Smokeygrey);
+}
+main .container .age_calculator .date .date_month #month.active{
+    border-color: var(--Lightred);
+}
+main .container .age_calculator .date .date_month #error_1{
+    color: var(--Lightred);
+    font-size: 12px;
+    font-family:"Poppins";
+    font-weight: 400;
+}
+main .container .age_calculator .date .date_years{
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    flex-direction: column;
+}
+main .container .age_calculator .date .date_years .Y{
+    font-size: 15px;
+    font-family:"Poppins";
+    font-weight: 400;
+    opacity: 0.8;
+}
+main .container .age_calculator .date .date_years .Y.active{
+    color: var(--Lightred);
+}
+
+main .container .age_calculator .date .date_years #year{
+    padding: 3px 0px;
+    width: 90px;
+    font-size: 32px;
+    border-radius: 8px;
+    border: none;
+    outline: none;
+    border: 1px solid var(--Smokeygrey);
+}
+main .container .age_calculator .date .date_years #year.active{
+    border-color: var(--Lightred);
+}
+main .container .age_calculator .date .date_years #error_2{
+    color: var(--Lightred);
+    font-size: 12px;
+    font-family:"Poppins";
+    font-weight: 400;
+}
+main .container .age_calculator .date img{
+    background-color: var(--Purple);
+    border-radius: 50%;
+    padding: 10px;
+    position: absolute;
+    bottom: -32px;
+    right: 0;
+    cursor: pointer;
+    transition: all 0.8s;
+}
+main .container .age_calculator .date img:hover{
+    background-color: var(--Offblack);
+}
+main .container .age_calculator .result{
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    flex-direction: column;
+    margin: 10px 20px;
+    padding-bottom: 50px;
+    font-style: italic;
+}
+main .container .age_calculator .result .res_years #resu_year{
+    color: var(--Purple);
+    font-size: 50px;
+    font-weight: 800;
+    font-family: "Poppins" ;
+}
+main .container .age_calculator .result .res_years span{
+    display: inline-block;
+    color: var(--Offblack);
+    font-size: 50px;
+    font-weight: 800;
+    font-family: "Poppins" ;
+}
+main .container .age_calculator .result .res_month #resu_month{
+    color: var(--Purple);
+    font-size: 50px;
+    font-weight: 800;
+    font-family: "Poppins" ;
+}
+main .container .age_calculator .result .res_month span{
+    display: inline-block;
+    color: var(--Offblack);
+    font-size: 50px;
+    font-weight: 800;
+    font-family: "Poppins" ;
+}
+main .container .age_calculator .result .res_day #resu_day{
+    color: var(--Purple);
+    font-size: 50px;
+    font-weight: 800;
+    font-family: "Poppins" ;
+}
+main .container .age_calculator .result .res_day span{
+    display: inline-block;
+    color: var(--Offblack);
+    font-size: 50px;
+    font-weight: 800;
+    font-family: "Poppins" ;
+}
+@media(max-width:480px){
+    main .container .age_calculator {
+        height: 400px;
+        width: 400px;
+      }
+}
+@media(max-width:375px){
+      main .container .age_calculator {
+        width: 360px;
+        height: 460px;
+      }
+      main .container .age_calculator .date img {
+        right: 126px;
+      }
+      main .container .age_calculator .result {
+        margin: 25px 20px 0;
+      }
+}
